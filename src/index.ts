@@ -1,22 +1,33 @@
+/*
+ * Generates a valid CSS selector using a given target node
+ * @param {HTMLElement} target
+ * @param {HTMLElement} [document.body] root
+ * @returns {string}
+ */
 function cssSelectorGenerator(target: HTMLElement, root = document.body) {
-  const output = [getNode(target)];
-  let current: Element | null | undefined = target;
+  const output = [getReference(target)];
+  let current: HTMLElement | null = target;
 
   while (current !== root) {
     current = current?.parentElement;
 
     if (current) {
-      const node = getNode(current);
-      output.push(node);
+      const reference = getReference(current);
+      output.push(reference);
     } else {
-      throw new Error('root node could not be reached out! :/');
+      throw new Error('root node can not be reached out! :/');
     }
   }
 
   return output.reverse().join(' > ');
 }
 
-function getNode(element: Element) {
+/*
+ * Returns the element id and in case it is not possible then returns its tag name
+ * @param {HTMLElement} target
+ * @returns {string}
+ */
+function getReference(element: HTMLElement) {
   if (element.hasAttribute('id')) {
     const id = element.getAttribute('id');
     return `#${id}`;

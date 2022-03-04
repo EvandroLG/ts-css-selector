@@ -1,18 +1,9 @@
 {
-  "include": [
-    "src",
-    "types"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
+  "include": ["src", "types"],
+  "exclude": ["node_modules", "dist", "src/*.test.ts"],
   "compilerOptions": {
     "module": "esnext",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     "outDir": "dist",
     "importHelpers": true,
     "declaration": true,
