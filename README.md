@@ -7,13 +7,13 @@ A CSS Selector generator.
 To install `ts-css-selector`, execute:
 
 ```shell
-  npm install ts-css-selector
+npm install ts-css-selector
 ```
 
 or
 
 ```shell
-  yarn add ts-css-selector
+yarn add ts-css-selector
 ```
 
 ## Usage
