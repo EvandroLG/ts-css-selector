@@ -1,4 +1,4 @@
-# ts-css-selector &middot; [![npm](https://img.shields.io/npm/v/the-storage.svg?style=flat)](https://www.npmjs.com/package/the-storage) [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
+# ts-css-selector &middot; [![npm](https://img.shields.io/npm/v/ts-css-selector.svg?style=flat)](https://www.npmjs.com/package/ts-css-selector) [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 
 A CSS Selector generator.
 
