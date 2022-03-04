@@ -1,0 +1,33 @@
+{
+  "name": "css-selector-generator",
+  "description": "A CSS selector generator",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "author": "Evandro Leopoldino Gonçalves",
+  "license": "MIT",
+  "keywords": [
+    "dom",
+    "css",
+    "selector",
+    "generator"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "lint": "eslint"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0",
+    "jest": "^27.5.1",
+    "jest-environment-jsdom": "^27.5.1",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.6.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.6.2"
+  }
+}
