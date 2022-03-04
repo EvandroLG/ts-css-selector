@@ -1,5 +1,5 @@
 {
-  "name": "css-selector-generator",
+  "name": "ts-css-selector",
   "description": "A CSS selector generator",
   "version": "1.0.0",
   "main": "dist/index.js",
