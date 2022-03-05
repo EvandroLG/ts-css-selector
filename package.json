@@ -1,7 +1,7 @@
 {
   "name": "ts-css-selector",
   "description": "A CSS selector generator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "author": "Evandro Leopoldino Gonçalves",
