@@ -2,6 +2,7 @@
  * Generates a valid CSS selector using a given target node
  * @param {HTMLElement} target
  * @param {HTMLElement} [document.body] root
+ * @param {boolean} [false] isAsync
  * @returns {Promise<string> | string}
  */
 function cssSelectorGenerator(
