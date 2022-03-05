@@ -34,3 +34,19 @@ test('throws an error in case root could not be reached', () => {
 
   expect(() => cssSelectorGenerator(target, root)).toThrowError();
 });
+
+test('resolves promise returning the valid path from root to target', () => {
+  const root = query('div') as HTMLElement;
+  const target = query('button') as HTMLElement;
+
+  return expect(cssSelectorGenerator(target, root, true)).resolves.toBe(
+    'div > #container > button'
+  );
+});
+
+test('rejects promise in case root could not be reached', () => {
+  const root = query('#list') as HTMLElement;
+  const target = query('button') as HTMLElement;
+
+  return expect(cssSelectorGenerator(target, root, true)).rejects.toBeTruthy();
+});

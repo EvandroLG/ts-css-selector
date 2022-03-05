@@ -2,9 +2,36 @@
  * Generates a valid CSS selector using a given target node
  * @param {HTMLElement} target
  * @param {HTMLElement} [document.body] root
- * @returns {string}
+ * @returns {Promise<string> | string}
  */
-function cssSelectorGenerator(target: HTMLElement, root = document.body) {
+function cssSelectorGenerator(
+  target: HTMLElement,
+  root = document.body,
+  isAsync = false
+): Promise<string> | string {
+  if (isAsync) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        try {
+          const result = cssSelectorHelper(target, root);
+          resolve(result);
+        } catch (e) {
+          reject(e);
+        }
+      }, 10);
+    });
+  }
+
+  return cssSelectorHelper(target, root);
+}
+
+/*
+ * Traverses DOM tree starting from `target` to `root` and returns a valid path
+ * @param {HTMLElement} target
+ * @param {HTMLElement} root
+ * @returns {Promise<string> | string}
+ */
+function cssSelectorHelper(target: HTMLElement, root: HTMLElement) {
   const output = [getReference(target)];
   let current: HTMLElement | null = target;
 
